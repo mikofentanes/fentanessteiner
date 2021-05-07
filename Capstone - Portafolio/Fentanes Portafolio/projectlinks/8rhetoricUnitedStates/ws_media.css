@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Case Problem 1
+
+   Rhetoric in the United States Styles for Media
+      Author: Michelle F
+      Date: 3/8/21 
+   Filename: ws_media.css
+*/
+
+
+/* VideoPlayer Styles */
+
+/*7. Save your changes to the file and then go to the ws_media.css file in your editor. Within the Video Player Styles section, insert a style rule that displays video elements as blocks with a width of 90% and horizontally centered by setting the top/bottom margins to 5 pixels and the left/right margins to auto.*/
+video{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+}
+
+/*8. Create a media query for screen devices with a minimum width of 521 pixels. (See Tutorial 5 to review media queries.) Within the media query, create a style for video elements that sets the width of the player to 360 pixels, floated on the right margin with a margin width of 10 pixels.*/
+@media only screen and (min-width: 521px){
+    video{
+        width: 360px;
+        float: right;
+        margin: 10px;
+    }
+}
+
+
+
+
+/* Track Styles */
+::cue {
+    font: 1.3em sans-serif;
+    color: rgb(221,128,1600);
+    background: rgba(255,255,255,0.8);
+}
+
+
+
+
+
+
+
+
+
+

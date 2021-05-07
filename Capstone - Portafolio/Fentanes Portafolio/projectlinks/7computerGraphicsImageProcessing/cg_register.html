@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      New Perspectives on HTML5 and CSS3, 8th Edition
+      Tutorial 7
+      Case Problem 1
+
+      CGIP Registration Form
+      Author: 
+      Date:   
+
+      Filename:   cg_register.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>CGIP Registration Form</title>
+   <link href="cg_base.css" rel="stylesheet" />
+   <link href="cg_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="cg_forms.css">
+   <link rel="stylesheet" href="cg_validate.css">
+   <script src="cg_script.js"></script>
+<!-- 2. Return to the cg_register.html file in your editor. Add a link to the cg_forms.css and cg_validate.css style sheet files to the document head.-->
+<!-- 3. Add a script element to the document head that loads the cg_script.js file.-->
+</head>
+
+<body>
+   <header>
+      <img src="cg_logo.png" alt="Computer Graphics and Image Processing" id="logoimg" />
+   </header>
+   <nav>
+      <ul>
+         <li><a href="#">home page</a></li>
+         <li><a href="#">keynote address</a></li>
+         <li><a href="#">speakers</a></li>
+         <li class="newgroup"><a href="#">general session</a></li>
+         <li><a href="#">abstracts</a></li>
+         <li><a href="#">programs</a></li>
+         <li><a href="#">workshops</a></li> 
+         <li class="newgroup"><a href="#">committees</a></li>
+         <li><a href="#">executive session</a></li>
+         <li><a href="#">advisory council</a></li> 
+         <li class="newgroup"><a href="#">travel info</a></li>
+         <li><a href="#">accommodations</a></li>
+         <li><a href="#">banquet</a></li>
+         <li><a href="#">family attractions</a></li>
+         <li class="newgroup"><a href="#">registration</a></li>
+         <li class="newgroup"><a href="#">ACGIP home page</a></li>
+         <li><a href="#">tour Sante Fe</a></li>
+         <li><a href="#">links</a></li>                                                      
+      </ul>         
+   </nav>
+   <section>
+<!-- 4. Scroll down to the section element and insert a web form element that employs the action at http://www.example.com/cg/register via the post method.-->
+<!-- 5. Add the labels and input boxes shown previously in Figure 7-65 and described in Figure 7-66. Place the input boxes directly after the labels and associate each label with its input box control. You do not need to enclose the label and input elements with div elements. HTML511 list of types and 563 example -->
+      <h1>Conference Registration Form</h1>
+      <p>Required Item (*)</p>
+      <form action="http://www.example.com/cg/register" method="post">
+        <label for="title">Title</label> 
+        <input type="text" id="titleBox" list="titleList">
+            <datalist id="titleList">
+                <option value="Mr."/>
+                <option value="Mrs."/>
+                <option value="Prof."/>
+                <option value="Dr."/>
+                <option value="Assist. Prof."/>
+                <option value="Assoc. Prof."/>
+            </datalist>
+<!--6. Create a data list named titleList containing the suggestions: Mr., Mrs., Ms., Prof., Dr., Assist. Prof., and Assoc. Prof. Apply the titleList data list to the titleBox control. HTML546-->
+        <label for="firstName">First Name*</label> 
+        <input type="text" id="fnBox" required>
+         
+        <label for="lastName">Last Name*</label> 
+        <input type="text" id="lnBox" required>
+         
+        <label for="address">Address*</label> 
+        <input type="text" id="addBox" required> 
+        
+        <label for="group">Company or University</label> 
+        <input type="text" id="groupBox"> 
+        
+        <label for="email">E-mail*</label> 
+        <input type="email" id="mailBox" required> 
+        
+        <label for="phoneNumber">Phone Number*</label> 
+        <input type="tel" id="phoneBox" placeholder="(nnn) nnn-nnnn" pattern="A\d{10}$|A(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+<!--7. Apply the regular expression pattern A\d{10}$|A(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$ to the phoneNumber field. Apply the regular expression pattern Aacgip\-\d{6}$ to the acgipID field. (Note: You can copy the regular expression code for the phoneNumber field from the cg_regex.txt file.)-->
+        
+        <label for="acgipID">ACGIP Membership Number</label> 
+        <input type="text" id="idBox" placeholder="acgip-nnnnnn" pattern="Aacgip\-\d{6}$">
+<!--8. Add the Registration Category label associated with the regList control. Add a selection list with the ID regList that stores values in the registerType field. Populate the selection list with the option text: "ACGIP Member ($695)", "Non-Member ($795)", "Student ($310)", "Poster ($95)", and "Guest ($35)". Make the corresponding option values equal to "member", "nonmember", "student", "poster", and "guest". HTML528-->
+        <label for="regList">Registration Category</label>
+        <select id="regList" name="registerType">
+            <option value="member">ACGIP Member ($695)</option>
+            <option value="nonmember">Non-Member ($795)</option>
+            <option value="student">Student ($310)</option>
+            <option value="poster">Poster ($95)</option>
+            <option value="guest">Guest ($35)</option>
+        </select>
+<!--9. Within the form, add a paragraph containing a submit button with the text continue. HTML 546-->
+     <p><input type="submit" value="continue"/></p>
+      </form>
+
+   </section>
+   
+   <aside>
+      <dl>
+         <dt>ACGIP Member ($695)</dt>
+         <dd>Eligible to attend all sessions and banquet</dd>
+         <dt>Non-Member ($795)</dt>
+         <dd>Eligible to attend all sessions and banquet</dd>
+         <dt>Student ($310)</dt>
+         <dd>Eligible to attend all sessions. <a href="#">Proof</a> of
+             student status required</dd>
+         <dt>Poster ($95)</dt>
+         <dd>Eligible to attend display hall and vendor stations</dd>
+         <dt>Guest ($35)</dt>
+         <dd>Eligible to attend banquet only</dd>
+      </dl>
+   </aside>
+
+   <footer>
+      Association of Computer Graphics and Image Processing
+   </footer>
+</body>
+</html>

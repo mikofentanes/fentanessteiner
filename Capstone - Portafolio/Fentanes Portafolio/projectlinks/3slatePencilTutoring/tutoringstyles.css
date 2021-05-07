@@ -1,0 +1,84 @@
+@charset"utf-8";
+
+/*Windows and body styles*/
+
+html{
+    background-color: rgb(230,182,144); }
+
+body{ 
+    background-color: rgb(250,238,218);
+    font-family: Verdana, Geneva, Arial, sans-serif;}
+
+
+/* Page Headers*/
+
+body > header {
+    background-color: rgb(61,138,216);}
+
+body > header > nav a {
+    color: white;
+    font-size: 20px;
+    margin: 0.4em 0;
+    padding: 5px;}
+
+body > header> nav a:link, > body > header > nav a:visited{
+    color: rgb (250,238,218);}
+
+body > header> nav a:hover, > body > header > nav a:active {
+    color: rgb (250,238,218);}
+
+
+/* Horizontal Nav list styles*/
+
+nav.horizontal ul li{
+    background-color: midnightblue;
+    font-size: 0.9em;
+    padding: 10px 0;
+    text-align: center;}
+
+nav.horizontal a:link, nav.horizontal a:visited{
+    color: rgb(250,238,218);}
+
+nav.horizontal a:hover, nav.horizontal a:active{
+    color: rgb(255,255,64);}
+
+
+/*School Topics */
+
+ul#topics{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul#topics li p{
+    color: rgb(95,144,232);
+    font-size: 0.8em;
+}
+
+
+/*Student/Customer Comments */
+
+ul#comments li p{
+    color: rgb(121,121,121);
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+
+
+/*Footer */
+
+footer{
+    color: rgb(186,186,156);
+    background-color: rgb(44,91,169);
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 0.9em;}
+
+
+
+
+
+
+
+
+
